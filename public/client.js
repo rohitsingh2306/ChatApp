@@ -9,7 +9,9 @@ do{
 
 textarea.addEventListener("keyup",(e)=>{
    if(e.key === "Enter"){
+       if(e.target.value.trim()!=""){
        sendMessage(e.target.value);
+       }
        e.target.value="";
        scrollToBottom();
    }
